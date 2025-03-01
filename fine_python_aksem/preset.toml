@@ -1,0 +1,5 @@
+[tool.finecode.preset]
+actions = [
+    { name = 'textDocumentInlayHint', source = 'fine_python_module_exports.extension.get_document_inlay_hints' },
+    { name = 'textDocumentCodeAction', source = 'fine_python_module_exports.extension.get_document_code_actions' },
+]

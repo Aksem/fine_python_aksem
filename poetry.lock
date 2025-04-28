@@ -136,7 +136,7 @@ finecode_extension_api = {git = "ssh://git@github.com/finecode-dev/finecode.git"
 
 [package.source]
 type = "git"
-url = "ssh://git@github.com/Aksem/FineCode.git"
+url = "ssh://git@github.com/finecode-dev/finecode.git"
 reference = "HEAD"
 resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
 subdirectory = "extensions/fine_python_module_exports"
@@ -164,7 +164,7 @@ watchdog = "==4.0.*"
 
 [package.source]
 type = "git"
-url = "ssh://git@github.com/Aksem/FineCode.git"
+url = "ssh://git@github.com/finecode-dev/finecode.git"
 reference = "HEAD"
 resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
 
@@ -509,4 +509,4 @@ dev = ["black (>=19.3b0) ; python_version >= \"3.6\"", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11, < 3.14"
-content-hash = "a7a173b57ddb4dd3c78d2dee7d5684488d95825f4f9d4ee2b61ae43a3a131bbe"
+content-hash = "bbe6a7d1655adf9f603b5d73c0cf71b878372f70fbe1b32a19b00fa983a35f27"

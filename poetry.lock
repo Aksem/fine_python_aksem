@@ -87,14 +87,14 @@ files = [
 
 [[package]]
 name = "command-runner"
-version = "1.7.2"
+version = "1.7.3"
 description = "Platform agnostic command and shell execution tool, also allows UAC/sudo privilege elevation"
 optional = false
 python-versions = ">=2.7"
 groups = ["main"]
 files = [
-    {file = "command_runner-1.7.2-py3-none-any.whl", hash = "sha256:3d8393262916a008c6023ced70f9ed4e1c37419c38f5d4a49925c01739323f54"},
-    {file = "command_runner-1.7.2.tar.gz", hash = "sha256:94e1a96bfe217432a61fd31d943d36d7a9d42b3e0869958d5cdd0942be552a4c"},
+    {file = "command_runner-1.7.3-py3-none-any.whl", hash = "sha256:fd2b89ccf6686c250eb056fa7ad6acf4817370f81df7b8b70b5cdb65ad5d074a"},
+    {file = "command_runner-1.7.3.tar.gz", hash = "sha256:d1e34a3c7ae218f6d6f705e9683efea1166628618df7ea3b9b20c968688b6835"},
 ]
 
 [package.dependencies]
@@ -111,13 +111,13 @@ files = []
 develop = false
 
 [package.dependencies]
-finecode_extension_api = {git = "ssh://git@github.com/Aksem/FineCode.git", subdirectory = "finecode_extension_api"}
+finecode_extension_api = {git = "ssh://git@github.com/finecode-dev/finecode.git", subdirectory = "finecode_extension_api"}
 
 [package.source]
 type = "git"
-url = "ssh://git@github.com/Aksem/FineCode.git"
+url = "ssh://git@github.com/finecode-dev/finecode.git"
 reference = "HEAD"
-resolved_reference = "b9c055ddae4e6373a89facfa8ca57e4799c2ac2b"
+resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
 subdirectory = "extensions/fine_python_ast"
 
 [[package]]
@@ -131,14 +131,14 @@ files = []
 develop = false
 
 [package.dependencies]
-fine_python_ast = {git = "ssh://git@github.com/Aksem/FineCode.git", subdirectory = "extensions/fine_python_ast"}
-finecode_extension_api = {git = "ssh://git@github.com/Aksem/FineCode.git", subdirectory = "finecode_extension_api"}
+fine_python_ast = {git = "ssh://git@github.com/finecode-dev/finecode.git", subdirectory = "extensions/fine_python_ast"}
+finecode_extension_api = {git = "ssh://git@github.com/finecode-dev/finecode.git", subdirectory = "finecode_extension_api"}
 
 [package.source]
 type = "git"
 url = "ssh://git@github.com/Aksem/FineCode.git"
 reference = "HEAD"
-resolved_reference = "b9c055ddae4e6373a89facfa8ca57e4799c2ac2b"
+resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
 subdirectory = "extensions/fine_python_module_exports"
 
 [[package]]
@@ -154,7 +154,7 @@ develop = false
 [package.dependencies]
 click = "==8.1.*"
 command_runner = "==1.7.*"
-finecode_extension_api = {git = "ssh://git@github.com/Aksem/FineCode.git", subdirectory = "finecode_extension_api"}
+finecode_extension_api = {git = "ssh://git@github.com/finecode-dev/finecode.git", subdirectory = "finecode_extension_api"}
 loguru = "==0.7.*"
 platformdirs = "==4.3.*"
 pydantic = "==2.10.*"
@@ -166,7 +166,7 @@ watchdog = "==4.0.*"
 type = "git"
 url = "ssh://git@github.com/Aksem/FineCode.git"
 reference = "HEAD"
-resolved_reference = "b9c055ddae4e6373a89facfa8ca57e4799c2ac2b"
+resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
 
 [[package]]
 name = "finecode-extension-api"
@@ -184,9 +184,9 @@ typing-extensions = ">=4.12.2,<5.0.0"
 
 [package.source]
 type = "git"
-url = "ssh://git@github.com/Aksem/FineCode.git"
+url = "ssh://git@github.com/finecode-dev/finecode.git"
 reference = "HEAD"
-resolved_reference = "b9c055ddae4e6373a89facfa8ca57e4799c2ac2b"
+resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
 subdirectory = "finecode_extension_api"
 
 [[package]]
@@ -432,14 +432,14 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.13.0"
+version = "4.13.2"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "typing_extensions-4.13.0-py3-none-any.whl", hash = "sha256:c8dd92cc0d6425a97c18fbb9d1954e5ff92c1ca881a309c45f06ebc0b79058e5"},
-    {file = "typing_extensions-4.13.0.tar.gz", hash = "sha256:0a4ac55a5820789d87e297727d229866c9650f6521b64206413c4fbada24d95b"},
+    {file = "typing_extensions-4.13.2-py3-none-any.whl", hash = "sha256:a439e7c04b49fec3e5d3e2beaa21755cadbbdc391694e28ccdd36ca4a1408f8c"},
+    {file = "typing_extensions-4.13.2.tar.gz", hash = "sha256:e6c81219bd689f51865d9e372991c540bda33a0379d5573cddb9a3a23f7caaef"},
 ]
 
 [[package]]

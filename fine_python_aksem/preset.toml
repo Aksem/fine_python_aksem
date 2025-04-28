@@ -1,15 +1,10 @@
-[tool.finecode.preset]
-actions = [
-    { name = 'text_document_inlay_hint', source = "finecode_extension_api.actions.ide.text_document_inlay_hint.TextDocumentInlayHintAction" },
-    # { name = 'text_document_code_action' },
-]
-
 [tool.finecode.action.text_document_inlay_hint]
-subactions = [
+source = "finecode_extension_api.actions.ide.text_document_inlay_hint.TextDocumentInlayHintAction"
+handlers = [
     { name = 'module_exports_inlay_hint', source = 'fine_python_module_exports.extension.get_document_inlay_hints' },
 ]
 
-[tool.finecode.action.text_document_code_action]
-subactions = [
-    { name = 'module_exports_code_actions', source = 'fine_python_module_exports.extension.get_document_code_actions' },
-]
+# [tool.finecode.action.text_document_code_action]
+# handlers = [
+#     { name = 'module_exports_code_actions', source = 'fine_python_module_exports.extension.get_document_code_actions' },
+# ]

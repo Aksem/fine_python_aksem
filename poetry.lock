@@ -86,21 +86,6 @@ files = [
 ]
 
 [[package]]
-name = "command-runner"
-version = "1.7.3"
-description = "Platform agnostic command and shell execution tool, also allows UAC/sudo privilege elevation"
-optional = false
-python-versions = ">=2.7"
-groups = ["dev"]
-files = [
-    {file = "command_runner-1.7.3-py3-none-any.whl", hash = "sha256:fd2b89ccf6686c250eb056fa7ad6acf4817370f81df7b8b70b5cdb65ad5d074a"},
-    {file = "command_runner-1.7.3.tar.gz", hash = "sha256:d1e34a3c7ae218f6d6f705e9683efea1166628618df7ea3b9b20c968688b6835"},
-]
-
-[package.dependencies]
-psutil = ">=5.6.0"
-
-[[package]]
 name = "fine-python-ast"
 version = "0.1.0"
 description = ""
@@ -111,13 +96,13 @@ files = []
 develop = false
 
 [package.dependencies]
-finecode_extension_api = {git = "ssh://git@github.com/finecode-dev/finecode.git", subdirectory = "finecode_extension_api"}
+finecode_extension_api = {git = "https://github.com/finecode-dev/finecode.git", subdirectory = "finecode_extension_api"}
 
 [package.source]
 type = "git"
-url = "ssh://git@github.com/finecode-dev/finecode.git"
+url = "https://github.com/finecode-dev/finecode.git"
 reference = "HEAD"
-resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
+resolved_reference = "2c9d8c10479d9eca78d5ae5b3328bd54fa5232ab"
 subdirectory = "extensions/fine_python_ast"
 
 [[package]]
@@ -131,14 +116,14 @@ files = []
 develop = false
 
 [package.dependencies]
-fine_python_ast = {git = "ssh://git@github.com/finecode-dev/finecode.git", subdirectory = "extensions/fine_python_ast"}
-finecode_extension_api = {git = "ssh://git@github.com/finecode-dev/finecode.git", subdirectory = "finecode_extension_api"}
+fine_python_ast = {git = "https://github.com/finecode-dev/finecode.git", subdirectory = "extensions/fine_python_ast"}
+finecode_extension_api = {git = "https://github.com/finecode-dev/finecode.git", subdirectory = "finecode_extension_api"}
 
 [package.source]
 type = "git"
-url = "ssh://git@github.com/finecode-dev/finecode.git"
+url = "https://github.com/finecode-dev/finecode.git"
 reference = "HEAD"
-resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
+resolved_reference = "2c9d8c10479d9eca78d5ae5b3328bd54fa5232ab"
 subdirectory = "extensions/fine_python_module_exports"
 
 [[package]]
@@ -153,9 +138,9 @@ develop = false
 
 [package.dependencies]
 click = "==8.1.*"
-command_runner = "==1.7.*"
-finecode_extension_api = {git = "ssh://git@github.com/finecode-dev/finecode.git", subdirectory = "finecode_extension_api"}
+finecode_extension_api = {git = "https://github.com/finecode-dev/finecode.git", subdirectory = "finecode_extension_api"}
 loguru = "==0.7.*"
+ordered-set = "==4.1.*"
 platformdirs = "==4.3.*"
 pydantic = "==2.10.*"
 pygls = "2.0.0-a2"
@@ -164,16 +149,16 @@ watchdog = "==4.0.*"
 
 [package.source]
 type = "git"
-url = "ssh://git@github.com/finecode-dev/finecode.git"
+url = "https://github.com/finecode-dev/finecode.git"
 reference = "HEAD"
-resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
+resolved_reference = "2c9d8c10479d9eca78d5ae5b3328bd54fa5232ab"
 
 [[package]]
 name = "finecode-extension-api"
 version = "0.1.0"
 description = ""
 optional = false
-python-versions = ">=3.11"
+python-versions = ">=3.11, < 3.14"
 groups = ["main", "dev"]
 files = []
 develop = false
@@ -184,9 +169,9 @@ typing-extensions = ">=4.12.2,<5.0.0"
 
 [package.source]
 type = "git"
-url = "ssh://git@github.com/finecode-dev/finecode.git"
+url = "https://github.com/finecode-dev/finecode.git"
 reference = "HEAD"
-resolved_reference = "439891bbf166521a6063a6fdfd561c9afa992c74"
+resolved_reference = "2c9d8c10479d9eca78d5ae5b3328bd54fa5232ab"
 subdirectory = "finecode_extension_api"
 
 [[package]]
@@ -225,6 +210,21 @@ attrs = ">=21.3.0"
 cattrs = "!=23.2.1"
 
 [[package]]
+name = "ordered-set"
+version = "4.1.0"
+description = "An OrderedSet is a custom MutableSet that remembers its order, so that every"
+optional = false
+python-versions = ">=3.7"
+groups = ["dev"]
+files = [
+    {file = "ordered-set-4.1.0.tar.gz", hash = "sha256:694a8e44c87657c59292ede72891eb91d34131f6531463aab3009191c77364a8"},
+    {file = "ordered_set-4.1.0-py3-none-any.whl", hash = "sha256:046e1132c71fcf3330438a539928932caf51ddbc582496833e23de611de14562"},
+]
+
+[package.extras]
+dev = ["black", "mypy", "pytest"]
+
+[[package]]
 name = "platformdirs"
 version = "4.3.7"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
@@ -240,30 +240,6 @@ files = [
 docs = ["furo (>=2024.8.6)", "proselint (>=0.14)", "sphinx (>=8.1.3)", "sphinx-autodoc-typehints (>=3)"]
 test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=8.3.4)", "pytest-cov (>=6)", "pytest-mock (>=3.14)"]
 type = ["mypy (>=1.14.1)"]
-
-[[package]]
-name = "psutil"
-version = "7.0.0"
-description = "Cross-platform lib for process and system monitoring in Python.  NOTE: the syntax of this script MUST be kept compatible with Python 2.7."
-optional = false
-python-versions = ">=3.6"
-groups = ["dev"]
-files = [
-    {file = "psutil-7.0.0-cp36-abi3-macosx_10_9_x86_64.whl", hash = "sha256:101d71dc322e3cffd7cea0650b09b3d08b8e7c4109dd6809fe452dfd00e58b25"},
-    {file = "psutil-7.0.0-cp36-abi3-macosx_11_0_arm64.whl", hash = "sha256:39db632f6bb862eeccf56660871433e111b6ea58f2caea825571951d4b6aa3da"},
-    {file = "psutil-7.0.0-cp36-abi3-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:1fcee592b4c6f146991ca55919ea3d1f8926497a713ed7faaf8225e174581e91"},
-    {file = "psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4b1388a4f6875d7e2aff5c4ca1cc16c545ed41dd8bb596cefea80111db353a34"},
-    {file = "psutil-7.0.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a5f098451abc2828f7dc6b58d44b532b22f2088f4999a937557b603ce72b1993"},
-    {file = "psutil-7.0.0-cp36-cp36m-win32.whl", hash = "sha256:84df4eb63e16849689f76b1ffcb36db7b8de703d1bc1fe41773db487621b6c17"},
-    {file = "psutil-7.0.0-cp36-cp36m-win_amd64.whl", hash = "sha256:1e744154a6580bc968a0195fd25e80432d3afec619daf145b9e5ba16cc1d688e"},
-    {file = "psutil-7.0.0-cp37-abi3-win32.whl", hash = "sha256:ba3fcef7523064a6c9da440fc4d6bd07da93ac726b5733c29027d7dc95b39d99"},
-    {file = "psutil-7.0.0-cp37-abi3-win_amd64.whl", hash = "sha256:4cf3d4eb1aa9b348dec30105c55cd9b7d4629285735a102beb4441e38db90553"},
-    {file = "psutil-7.0.0.tar.gz", hash = "sha256:7be9c3eba38beccb6495ea33afd982a44074b78f28c434a1f51cc07fd315c456"},
-]
-
-[package.extras]
-dev = ["abi3audit", "black (==24.10.0)", "check-manifest", "coverage", "packaging", "pylint", "pyperf", "pypinfo", "pytest", "pytest-cov", "pytest-xdist", "requests", "rstcheck", "ruff", "setuptools", "sphinx", "sphinx_rtd_theme", "toml-sort", "twine", "virtualenv", "vulture", "wheel"]
-test = ["pytest", "pytest-xdist", "setuptools"]
 
 [[package]]
 name = "pydantic"
@@ -509,4 +485,4 @@ dev = ["black (>=19.3b0) ; python_version >= \"3.6\"", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11, < 3.14"
-content-hash = "1c15ff77b1e4a283ca345117142f6d50ea20d7d468d26b3b026a278774a79c6e"
+content-hash = "acc49ef79f268fce5cab7e43e8d4f9d6a59ed717dddf2e5b7df60ad0b62c1737"
